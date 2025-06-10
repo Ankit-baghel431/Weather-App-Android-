@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".MainActivity">
+
+    <!-- Search View -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search city..."
+        android:background="@android:drawable/editbox_background"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- City Name -->
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Current Temperature -->
+    <TextView
+        android:id="@+id/mainTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--° C"
+        android:textSize="48sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Max Temp -->
+    <TextView
+        android:id="@+id/maxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAX TEMP: --° C"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/mainTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Min Temp -->
+    <TextView
+        android:id="@+id/minTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MIN TEMP: --° C"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/maxTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Day Text -->
+    <TextView
+        android:id="@+id/dayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/minTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Date Text -->
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 June 2025"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/dayText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Current Location Button -->
+    <Button
+        android:id="@+id/getCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Current Location"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:stateListAnimator="@null"
+        android:translationZ="0dp"
+        android:elevation="0dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/dateText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
